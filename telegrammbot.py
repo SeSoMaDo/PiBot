@@ -1,9 +1,14 @@
+#benötigte Pakete: - telegram libraray
+#                  - chatterbot library
+
+
+#libraries importieren
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from chatterbot import ChatBot
 import telegram.ext
-import nxt, time,sys,traceback,nxt.locator, nxt.brick
-from nxt.motor import *
-from nxt.sensor import *
+#import nxt, time,sys,traceback,nxt.locator, nxt.brick
+#from nxt.motor import *
+#from nxt.sensor import *
 import time
 import logging
 import json
@@ -12,30 +17,37 @@ import RPi.GPIO as GPIO
 
 
 
-
+#setup des programms
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
 
-
+#variablen:
+#custom kyboard für telegram
 global kb_markup
+
+#chat bot zum unterhalten
 global chatbot
+
+#servos
 global servo1
 global servo2
 global motor1
 global motor2
-global chatbot
+#global chatbot
 
 servo1 = 24
 servo2 = 23
 
+#chat bot library initialisieren
 chatbot= ChatBot(
     'Tele Rover',
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
     )
 
+#laden des chat bot german verzeichnisses
 chatbot.train("chatterbot.corpus.german")
 
 

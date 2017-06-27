@@ -1,0 +1,5 @@
+Bau und Programmierung eines spionagefähigen Roboters, der:
+
+1. über den Messengerdienst Telegramm gesteuert werden kann --> erledigt
+2. mithilfe einer PiCam auf Anfrage ein Foto übermitteln kann
+3. alternativ über eine eigens geschriebene Android App betrieben werden kann

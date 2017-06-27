@@ -1,3 +1,3 @@
 # PiBot
-Here you can find the Code running on the Raspberry Pi
+Der Code und die Berichterstattung für unser Schulprojekt, den spionagefähigen PiBot finden sich in diesem Verzeichnis
 

@@ -9,5 +9,7 @@ Logbuch von Käptn Rauschebart:
   --21.06.2017-- ENTFALL, SCHON WIEDER! kein Fortschritt `_´
   --27.06.2017-- Rad hat doch nicht gehalten
   --27.06.2017-- Python Code hochgeladen und kommentiert (anpassungen sind noch zu machen, Bluetooth fehlt)
-  --28.06.2017-- Neuer Radhaltemechanismus ausprobiert
+  --28.06.2017-- Neuer Radhaltemechanismus ausprobiert: Besser als zuvor, aber noch  nicht perfekt
+  --28.06.2017-- Anpassung der Servowerte, um besseres Fahrverhalten zu erreichen
+  --28.06.2017-- Fehlersuche im App-Code
   

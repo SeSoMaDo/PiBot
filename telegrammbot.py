@@ -6,9 +6,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from chatterbot import ChatBot
 import telegram.ext
-#import nxt, time,sys,traceback,nxt.locator, nxt.brick
-#from nxt.motor import *
-#from nxt.sensor import *
+import time,sys,traceback
 import time
 import logging
 import json
@@ -80,28 +78,34 @@ def echo(bot, update):
         
 
 def error(bot, update, error):
+    #gibt error an
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 def front(bot, update):
+    #vorwärts bewegung der beiden servos
     motor1.ChangeDutyCycle(9)
     motor2.ChangeDutyCycle(4)
     
 def back(bot, update):
+    #rückwärtsbewegung der beiden servos
     motor1.ChangeDutyCycle(4)
     motor2.ChangeDutyCycle(9)
     
     
 def left(bot, update):
+    #linksbewegung
     motor1.ChangeDutyCycle(4)
     motor2.ChangeDutyCycle(4)
     
     
 def right(bot, update):
+    #rechtsbewegung
     motor1.ChangeDutyCycle(9)
     motor2.ChangeDutyCycle(9)
     
     
 def control(bot, update):
+    #öffnet über telegramm das custom keyboard zum steuern des bots
     global kb
     global kb_markup
     kb = [[telegram.KeyboardButton('/front')],
@@ -117,16 +121,19 @@ def control(bot, update):
 
 
 def endcontrol(bot, update):
+    #stoppt motoren
     motor1.ChangeDutyCycle(100)
     motor2.ChangeDutyCycle(100)
     
 
 def stopmotors():
+    #stoppt motoren
     motor1.ChangeDutyCycle(100)
     motor2.ChangeDutyCycle(100)
     
 
 def neustartbot(bot, update):
+    #soll chatbot resetten, funktioniert aber leider nicht
     chatbot.train("chatterbot.corpus.english")
     chatbot.train("chatterbot.corpus.german")
 

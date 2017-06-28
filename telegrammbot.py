@@ -83,25 +83,25 @@ def error(bot, update, error):
 
 def front(bot, update):
     #vorwärts bewegung der beiden servos
-    motor1.ChangeDutyCycle(9)
-    motor2.ChangeDutyCycle(4)
+    motor1.ChangeDutyCycle(10)
+    motor2.ChangeDutyCycle(5.6)
     
 def back(bot, update):
     #rückwärtsbewegung der beiden servos
-    motor1.ChangeDutyCycle(4)
-    motor2.ChangeDutyCycle(9)
+    motor1.ChangeDutyCycle(5.6)
+    motor2.ChangeDutyCycle(10)
     
     
 def left(bot, update):
     #linksbewegung
-    motor1.ChangeDutyCycle(4)
-    motor2.ChangeDutyCycle(4)
+    motor1.ChangeDutyCycle(5.6)
+    motor2.ChangeDutyCycle(5.6)
     
     
 def right(bot, update):
     #rechtsbewegung
-    motor1.ChangeDutyCycle(9)
-    motor2.ChangeDutyCycle(9)
+    motor1.ChangeDutyCycle(10)
+    motor2.ChangeDutyCycle(10)
     
     
 def control(bot, update):
